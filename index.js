@@ -5,7 +5,7 @@ const usersRouter = require('./routers/users');
 const authRouter = require('./routers/auth');
 
 const app = express();
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 3306;
 
 app.use(bodyParser.json())
 app.use('/users', usersRouter)
@@ -18,3 +18,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
  console.log(`Web server is listening on port ${port}!`);
 });
+
+
